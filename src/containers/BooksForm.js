@@ -10,27 +10,25 @@ const categories = [
   'Sci-Fi',
 ];
 
-const BooksForm = () => {
-  return (
-    <form>
-      <label> Title:</label>
-      <input
-        type="text"
-        name="title"
-        value="{title}"
-      />
-      <label>Category:</label>
-      <select
-        name="category"
-        value=""
-      >
-        {categories.map(category => (
-          <option key={category}>{category}</option>
-        ))}
-      </select>
-      <button type="submit">Submit</button>
-    </form>
-  )
-}
+const BooksForm = () => (
+  <form>
+    <label> Title:</label>
+    <input
+      type="text"
+      name="title"
+      value="{title}"
+    />
+    <label>Category:</label>
+    <select
+      name="category"
+      value=""
+    >
+      {categories.map((category) => (
+        <option key={category}>{category}</option>
+      ))}
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+);
 
 export default BooksForm;
